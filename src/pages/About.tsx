@@ -36,7 +36,12 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 opacity-[0.06] pointer-events-none" style={{
+        backgroundImage: `radial-gradient(circle at 20px 20px, hsl(var(--muted-foreground)) 1px, transparent 0)`,
+        backgroundSize: '40px 40px'
+      }} />
+      <div className="relative z-10">
       <Header />
 
       {/* Hero Section */}
@@ -181,6 +186,7 @@ const About = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   );
 };

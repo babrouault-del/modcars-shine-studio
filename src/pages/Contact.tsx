@@ -37,7 +37,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <div className="absolute inset-0 pointer-events-none" style={{
+        background: 'radial-gradient(circle at 50% 50%, hsl(var(--muted) / 0.3) 0%, transparent 70%)'
+      }} />
+      <div className="relative z-10">
       <Header />
 
       {/* Hero Section */}
@@ -262,6 +266,7 @@ const Contact = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   );
 };

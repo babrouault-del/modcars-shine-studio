@@ -14,23 +14,27 @@ const Home = () => {
   const services = [
     {
       icon: Sparkles,
-      title: "Nettoyage Intérieur",
-      description: "Nettoyage complet de l'habitacle, sièges, tapis et tableau de bord",
+      title: "Détailing Intérieur Premium",
+      description: "Habitacle restauré : sièges (tissu/cuir), tapis, plastiques, aérateurs, tableau de bord.",
+      benefit: "Confort, hygiène, remise à neuf",
     },
     {
       icon: Droplets,
-      title: "Nettoyage Extérieur",
-      description: "Lavage carrosserie, jantes et finitions extérieures",
+      title: "Détailing Extérieur & Protection",
+      description: "Lavage méthode douce, jantes, décontamination, finitions soignées.",
+      benefit: "Brillance durable, protection de la carrosserie",
     },
     {
       icon: Shield,
-      title: "Lustrage des Phares",
-      description: "Rénovation et protection de vos optiques pour une visibilité optimale",
+      title: "Rénovation des Optiques",
+      description: "Ponçage, polissage, protection UV.",
+      benefit: "Visibilité renforcée, look rajeuni",
     },
     {
       icon: Car,
       title: "Prestations Sur Mesure",
-      description: "Services personnalisés selon vos besoins spécifiques",
+      description: "Utilitaires, flottes, traitements spécifiques, packs combinés.",
+      benefit: "Solution adaptée à vos besoins",
     },
   ];
 
@@ -46,7 +50,7 @@ const Home = () => {
             backgroundImage: `url(${heroImage})`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/60 to-primary/80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/85 via-primary/70 to-muted/60" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
@@ -88,32 +92,44 @@ const Home = () => {
               Nos Services
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Des prestations de qualité pour redonner à votre véhicule tout son éclat
+              Le soin professionnel qui fait la différence.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                className="group overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 border-2"
               >
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <service.icon className="h-8 w-8 text-primary" />
+                <CardContent className="p-8">
+                  <div className="w-14 h-14 mb-6 bg-primary/10 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300 group-hover:scale-110">
+                    <service.icon className="h-7 w-7 text-primary" strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+                  <p className="text-sm font-medium text-accent">
+                    {service.benefit}
+                  </p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" asChild className="shine-effect">
+              <Link to="/contact">
+                Demander un Devis Personnalisé
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
               <Link to="/services">
                 Voir Toutes Nos Prestations
-                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
           </div>
