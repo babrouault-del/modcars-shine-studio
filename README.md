@@ -1,73 +1,36 @@
-# Welcome to your Lovable project
+# Mod'Cars – Site vitrine
 
-## Project info
+Application React/Tailwind destinée à promouvoir les services de detailing automobile Mod'Cars (Binic-Étables-sur-Mer).
 
-**URL**: https://lovable.dev/projects/165a5ff6-a52c-43ac-90ee-f3a54de52a88
+## Démarrage rapide
 
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/165a5ff6-a52c-43ac-90ee-f3a54de52a88) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+L'application est servie via Vite sur `http://localhost:5173` par défaut.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts disponibles
 
-**Use GitHub Codespaces**
+- `npm run dev`: lance le serveur de développement.
+- `npm run build`: génère la version de production dans `dist/`.
+- `npm run preview`: prévisualise la build de production.
+- `npm run lint`: exécute ESLint.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Structure principale
 
-## What technologies are used for this project?
+- `src/pages/`: pages principales (Accueil, Services, À propos, Contact).
+- `src/components/`: éléments réutilisables (en-tête, pied de page, UI shadcn).
+- `src/assets/`: visuels utilisés dans les sections du site.
+- `public/`: assets servis statiquement (favicon, images de partage, robots.txt).
 
-This project is built with:
+## Personnalisation
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- Adapter les couleurs globales via `src/index.css` (design tokens Tailwind).
+- Mettre à jour les métadonnées SEO/Open Graph dans `index.html`.
+- Remplacer/ajouter des visuels dans `src/assets/` ou `public/`.
 
-## How can I deploy this project?
+## Déploiement
 
-Simply open [Lovable](https://lovable.dev/projects/165a5ff6-a52c-43ac-90ee-f3a54de52a88) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Construire le projet avec `npm run build` puis déployer le contenu de `dist/` sur l'hébergement de votre choix (Netlify, Vercel, OVH, etc.).

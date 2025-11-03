@@ -166,7 +166,7 @@ const Services = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="lg" variant="outline" asChild className="border-foreground text-foreground hover:bg-foreground/10 hover:text-foreground">
                   <a href="tel:0680542288">Appeler: 06 80 54 22 88</a>
                 </Button>
               </div>

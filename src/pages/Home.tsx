@@ -110,7 +110,7 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" asChild className="border-foreground text-foreground hover:bg-foreground/10 hover:text-foreground">
               <Link to="/services">
                 Voir Toutes Nos Prestations
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -226,7 +226,7 @@ const Home = () => {
             <Button size="lg" variant="secondary" asChild className="shine-effect">
               <Link to="/contact">Demander un Devis</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button size="lg" variant="outline" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground/20 hover:text-primary-foreground">
               <a href="tel:0680542288">Appeler: 06 80 54 22 88</a>
             </Button>
           </div>

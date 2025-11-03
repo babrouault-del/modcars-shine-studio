@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Award, Users, Clock, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import workshopImage from "@/assets/workshop.jpg";
-import cupraInterior from "@/assets/cupra-interior.jpg";
+import aboutPhilosophy from "@/assets/about-philosophy.jpg";
+import aboutQuality from "@/assets/about-quality.jpg";
 
 const About = () => {
   const values = [
@@ -82,9 +82,9 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/20 rounded-lg blur-xl" />
               <img
-                src={workshopImage}
-                alt="Atelier Mod'Cars"
-                className="relative rounded-lg shadow-2xl w-full"
+                src={aboutPhilosophy}
+                alt="Notre philosophie de travail"
+                className="relative rounded-lg shadow-2xl w-full h-auto object-cover"
               />
             </div>
           </div>
@@ -127,9 +127,9 @@ const About = () => {
             <div className="order-2 lg:order-1 relative">
               <div className="absolute inset-0 bg-primary/20 rounded-lg blur-xl" />
               <img
-                src={cupraInterior}
-                alt="Qualité de nos prestations"
-                className="relative rounded-lg shadow-2xl w-full"
+                src={aboutQuality}
+                alt="Notre engagement qualité, un service de nettoyage automobile de qualité à Binic-Étables-sur-Mer"
+                className="relative rounded-lg shadow-2xl w-full h-auto object-cover"
               />
             </div>
 
@@ -173,7 +173,7 @@ const About = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" asChild className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button size="lg" variant="outline" asChild className="border-primary-foreground bg-background text-foreground hover:bg-background/90 hover:text-foreground">
               <Link to="/services">Voir Nos Prestations</Link>
             </Button>
           </div>
