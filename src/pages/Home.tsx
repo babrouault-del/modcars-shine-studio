@@ -84,8 +84,46 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* About Preview */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="order-2 lg:order-1">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Mod'Cars, Votre Spécialiste
+                <br />
+                <span className="text-primary">du Nettoyage Auto</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                Chez Mod'Cars, nous croyons qu'un véhicule propre, c'est bien plus qu'une
+                question d'esthétique. C'est aussi du confort, de la sécurité et du
+                plaisir de conduite.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                Depuis Binic-Étables-sur-Mer, nous intervenons avec professionnalisme et
+                rigueur, que ce soit à notre atelier ou directement chez vous.
+              </p>
+              <Button size="lg" asChild>
+                <Link to="/about">
+                  En Savoir Plus
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <img
+                src={workshopImage}
+                alt="Atelier Mod'Cars"
+                className="rounded-lg shadow-2xl w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -137,7 +175,7 @@ const Home = () => {
       </section>
 
       {/* Gallery Preview */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -186,44 +224,6 @@ const Home = () => {
                   Finitions Soignées
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Mod'Cars, Votre Spécialiste
-                <br />
-                <span className="text-primary">du Nettoyage Auto</span>
-              </h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                Chez Mod'Cars, nous croyons qu'un véhicule propre, c'est bien plus qu'une
-                question d'esthétique. C'est aussi du confort, de la sécurité et du
-                plaisir de conduite.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                Depuis Binic-Étables-sur-Mer, nous intervenons avec professionnalisme et
-                rigueur, que ce soit à notre atelier ou directement chez vous.
-              </p>
-              <Button size="lg" asChild>
-                <Link to="/about">
-                  En Savoir Plus
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <img
-                src={workshopImage}
-                alt="Atelier Mod'Cars"
-                className="rounded-lg shadow-2xl w-full"
-              />
             </div>
           </div>
         </div>
